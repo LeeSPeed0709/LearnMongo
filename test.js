@@ -2,8 +2,8 @@ const User = require('./userInfo');
 
 function insert() {
     let user = new User({
-        username: 'Wang SiYuan',
-        userpwd: '123123',
+        username: 'Speedy Lee',
+        userpwd: 'qweewq',
         userage: 24,
         logindate: new Date()
     });
@@ -23,10 +23,10 @@ function update(){
     
     User.updateOne(wherestr, updatestr, (err, res) => {
         if (err) {
-            console.log("Error:" + err);
+            console.log(`Error: ${err}`);
         }
         else {
-            console.log("Res:" + res);
+            console.log(`Res: ${res}`);
         }
     })
 }
@@ -58,4 +58,4 @@ function del(){
     })
 }
 
-del();
+insert();
